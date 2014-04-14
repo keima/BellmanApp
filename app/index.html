@@ -1,24 +1,31 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="ja" ng-app="myApp">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>My App</title>  
-  <link rel="stylesheet" href="styles/app.css"/>
-  <link rel="stylesheet" href="lib/onsen/css/onsenui.css">  
-  <link rel="stylesheet" href="lib/onsen/css/topcoat-mobile-onsen-ios7.css">  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>My App</title>
+    <link rel="stylesheet" href="styles/app.css"/>
+    <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsen/css/topcoat-mobile-onsen-ios7.css">
 
-  <script src="plugins/plugin-loader.js"></script>    
-  <script src="lib/onsen/js/angular/angular.js"></script>    
-  <script src="lib/onsen/js/angular/angular-touch.js"></script>    
-  <script src="lib/onsen/js/onsenui.js"></script>    
-  <script src="js/app.js"></script>  
-  
+    <script src="lib/onsen/js/angular/angular.js"></script>
+    <script src="lib/onsen/js/angular/angular-touch.js"></script>
+    <script src="lib/onsen/js/onsenui.js"></script>
 </head>
+<body>
 
-<body>    
-  
-    <ons-screen page="navigator.html"></ons-screen>
- 
+<ons-sliding-menu
+        behind-page="menu.html"
+        above-page="navigator.html"></ons-sliding-menu>
+
+<!-- injector:js -->
+<script src="/app/js/app.js"></script>
+<script src="/app/js/controller.js"></script>
+<script src="/app/js/controllers/shinmachiEast.js"></script>
+<script src="/app/js/directive.js"></script>
+<script src="/app/js/directives/buttonBar.js"></script>
+<script src="/app/js/service.js"></script>
+<!-- endinjector -->
+
 </body>
 </html>

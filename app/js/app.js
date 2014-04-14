@@ -1,11 +1,14 @@
-(function(){
-	var myApp = angular.module('myApp', ['ngTouch', 'onsen.directives']);	
+'use strict';
 
-	myApp.controller('MyController', function($scope){
-		$scope.isLoading = true;
-
-		$scope.toggle = function(){
-			$scope.isLoading = !$scope.isLoading;
-		}
-	});
-})();
+angular.module('myApp',
+    [
+        'ngTouch',
+        'onsen.directives',
+        'myApp.service',
+        'myApp.controller'
+    ]
+)
+  .run(
+  function($rootScope){
+    $rootScope.appName = "マチ★アプリ";
+  });
